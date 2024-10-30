@@ -1,0 +1,12 @@
+.search-box {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 50px;
+    background-color: gray;
+    border-radius: 32px;
+    box-shadow: 2px;
+}
