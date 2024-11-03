@@ -12,16 +12,10 @@
   box-sizing: border-box;
 }
 
-.search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  padding-left: 8px;
-}
+
 
 .search-button {
-  background-color: #ff385C;
+  background-color: #ff385c;
   border: none;
   color: white;
   width: 48px;
@@ -42,15 +36,29 @@
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  font-size: medium;
+  font-size: small;
   margin-right: 10px;
   margin-left: 10px;
 }
 
-#add-guests-text {
+#bottom-text {
   color: gray;
 }
 
 .vertical-line {
-  border-left: solid rgb(185, 175, 175);
+  border-left: solid 0.5px rgb(185, 175, 175); ; 
+}
+
+.checkout-box {
+  margin-right: 70px;
+}
+
+.guests-box{
+  margin-right: 70px;
+}
+.checkin-box {
+  margin-right: 70px;
+}
+.where-box  {
+  margin-right: 100px;
 }
