@@ -7,12 +7,11 @@
   background-color: #fff;
   border-radius: 32px;
   box-shadow: 5px 5px 5px 5px rgb(223, 215, 215);
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%; /* Restrict max width for large screens */
   box-sizing: border-box;
 }
-
-
 
 .search-button {
   background-color: #ff385c;
@@ -25,7 +24,7 @@
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  margin-left: 8px; /* Adds spacing between input and button */
+  margin-left: 8px;
 }
 
 .ph-magnifying-glass {
@@ -37,8 +36,7 @@
   flex-direction: column;
   font-family: sans-serif;
   font-size: small;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin: 0 10px;
 }
 
 #bottom-text {
@@ -46,19 +44,74 @@
 }
 
 .vertical-line {
-  border-left: solid 0.5px rgb(185, 175, 175); ; 
+  border-left: solid 0.5px rgb(185, 175, 175);
+  margin: 0 10px;
 }
 
-.checkout-box {
+.checkout-box,
+.guests-box,
+.checkin-box,
+.where-box {
   margin-right: 70px;
 }
 
-.guests-box{
-  margin-right: 70px;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .checkout-box,
+  .guests-box,
+  .checkin-box,
+  .where-box {
+    margin-right: 40px;
+  }
 }
-.checkin-box {
-  margin-right: 70px;
+
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+    padding: 8px 12px;
+    height: auto;
+  }
+
+  .checkout-box,
+  .guests-box,
+  .checkin-box,
+  .where-box {
+    margin-right: 20px;
+  }
+
+  .search-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ph-magnifying-glass {
+    font-size: 18px;
+  }
 }
-.where-box  {
-  margin-right: 100px;
+
+@media (max-width: 480px) {
+  .search-box {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .checkout-box,
+  .guests-box,
+  .checkin-box,
+  .where-box {
+    margin-right: 10px;
+  }
+
+  .box-text {
+    font-size: x-small;
+  }
+
+  .search-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .ph-magnifying-glass {
+    font-size: 16px;
+  }
 }
