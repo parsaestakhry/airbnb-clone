@@ -1,34 +1,82 @@
-body{
-    width: 100vw;
-    overflow-x: hidden;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: XMAirbnb;
+    src: url(Font/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: bookAirbnb;
+    src: url(Font/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: regular;
+    src: url(Font/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2) format("woff2");
+  }
+  
+  @font-face {
+    font-family: boldFont;
+    src: url(Font/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2) format("woff2");
+  }
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
-    padding-left: 80px;
-    padding-right: 80px;
-    height: 80px;
-    width: 100%;
-    
+.header-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 80px;
 }
-.home{
-    text-decoration: none;
-    color: black;
-
+.hamburger,
+.language,
+.home,
+.exp,
+.stay,
+.logo-name {
+  cursor: pointer;
 }
-.header-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
+.left-header {
+  flex: 1;
 }
-button{
-    border: none;
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 0 24px;
+  flex: 1;
+}
+.stay, .exp{
+  background-color: transparent;
+  font-size: 16px;
+  flex-direction: column;
+  font-family:sans-serif;
+  font-weight: 500;
+  padding: 0;
+  padding: 10px 16px;
+  border: unset;
+}
+.home {
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+}
+.home-container {
+  margin-right: 8px;
+}
+.language {
+  padding: 12px;
+}
+.right-header {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex: 1;
 }
 /* .nav-menu{
     list-style-type: none;
@@ -41,15 +89,16 @@ button{
     color: #717171;
 } */
 
-.hamburger{
-    display: flex;
-    width: 300px;
-    height: 30px;
-    align-items: center;
-    justify-content: space-between;
-    gap:5px;
+.hamburger {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 8px 8px 8px 14px;
 }
-.avatar , .line {
-    width: 40%;
-    height: 100%;
+.avatar,
+.line {
+  height: 100%;
 }
