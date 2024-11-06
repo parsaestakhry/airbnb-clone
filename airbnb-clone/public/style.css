@@ -93,12 +93,21 @@ body {
   display: flex;
   height: 30px;
   align-items: center;
-  gap: 5px;
-  border: 1px solid;
-  border-radius: 20px;
+  gap: 10px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
   padding: 8px 8px 8px 14px;
+  position: relative;
+  transition: 0.2s ease;
 }
 .avatar,
 .line {
   height: 100%;
+}
+.line{
+  height: 16px;
+  width: 16px;
+}
+.avatar{
+  
 }
