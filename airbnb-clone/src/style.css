@@ -1,3 +1,117 @@
+@font-face {
+  font-family: XMAirbnb;
+  src: url(Font/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: bookAirbnb;
+  src: url(Font/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: regular;
+  src: url(Font/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: boldFont;
+  src: url(Font/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2) format("woff2");
+}
+body {
+width: 100vw;
+overflow-x: hidden;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.header-container {
+display: flex;
+position: relative;
+align-items: center;
+padding-left: 40px;
+padding-right: 40px;
+height: 80px;
+}
+.hamburger,
+.language,
+.home,
+.exp,
+.stay,
+.logo-name {
+cursor: pointer;
+}
+.left-header {
+flex: 1;
+}
+.header-center {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 80px;
+padding: 0 24px;
+flex: 1;
+}
+.stay, .exp{
+background-color: transparent;
+font-size: 16px;
+flex-direction: column;
+font-family:sans-serif;
+font-weight: 500;
+padding: 0;
+padding: 10px 16px;
+border: unset;
+}
+.home {
+text-decoration: none;
+color: black;
+padding: 12px;
+}
+.home-container {
+margin-right: 8px;
+}
+.language {
+padding: 12px;
+}
+.right-header {
+display: flex;
+justify-content: end;
+align-items: center;
+flex: 1;
+}
+/* .nav-menu{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+} */
+/* .avatar{
+  width: 30px;
+  height: 30px;
+  color: #717171;
+} */
+
+.hamburger {
+display: flex;
+height: 30px;
+align-items: center;
+gap: 10px;
+border: 1px solid #ddd;
+border-radius: 30px;
+padding: 8px 8px 8px 14px;
+position: relative;
+transition: 0.2s ease;
+}
+.avatar,
+.line {
+height: 100%;
+}
+.line{
+height: 16px;
+width: 16px;
+}
+.avatar{
+
+}
+
 .search-box {
   display: flex;
   justify-content: end;
