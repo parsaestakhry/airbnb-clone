@@ -66,11 +66,19 @@ text-decoration: none;
 color: black;
 padding: 12px;
 }
+.home:hover{
+background-color: #EBEBEB;
+border-radius: 22px;
+}
 .home-container {
 margin-right: 8px;
 }
 .language {
 padding: 12px;
+}
+.language:hover{
+border-radius: 22px;
+background-color: #EBEBEB;
 }
 .right-header {
 display: flex;
@@ -78,16 +86,45 @@ justify-content: end;
 align-items: center;
 flex: 1;
 }
-/* .nav-menu{
+
+.nav-menu{
   list-style-type: none;
   padding: 0px;
   margin: 0;
-} */
-/* .avatar{
+}
+.nav-menu li{
+  padding: 10px;
+  font-size: 14px;
+}
+.nav-menu li:hover {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none; /* در حالت عادی مخفی */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  width: 200px;
+  padding: 10px;
+}
+.menu.active .dropdown-menu {
+  display: block;
+}
+.avatar{
   width: 30px;
   height: 30px;
   color: #717171;
-} */
+}
 
 .hamburger {
 display: flex;
@@ -98,7 +135,10 @@ border: 1px solid #ddd;
 border-radius: 30px;
 padding: 8px 8px 8px 14px;
 position: relative;
-transition: 0.2s ease;
+transition: 0.2s ease-in-out;
+}
+.hamburger:hover{
+  box-shadow: 0px 3px 7px 1px #d7cdcd;
 }
 .avatar,
 .line {
@@ -263,19 +303,21 @@ width: 16px;
 .icon-text {
   font-size: 12px;
 }
-.filter{
+.filter-button{
+  padding: 7px 0;
 }
 .filter-icon{
   display: flex;
-  padding: 7px 0;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
   gap: 10px;
   border: 1px solid;
+  padding: 2px 16px 0 16px;
 }
 .category-icon{
 display: flex;
 justify-content: space-around;
 align-items: center;
+padding-top: 12px;
 }
