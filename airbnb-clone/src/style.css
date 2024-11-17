@@ -60,6 +60,13 @@ font-weight: 500;
 padding: 0;
 padding: 10px 16px;
 border: unset;
+transition: 0.2s ease-in;
+color: #b1aeae;
+}
+.stay, .exp:hover{
+  color: #444242;
+    background-color:#f2f1f1;
+    border-radius: 22px;
 }
 .home {
 text-decoration: none;
