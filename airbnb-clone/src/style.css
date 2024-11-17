@@ -158,125 +158,103 @@ width: 16px;
 .avatar{
 
 }
-
-.search-box {
+.search-box{
+  width: 100%;
   display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 8px 16px;
-  height: 62px;
-  background-color: #fff;
-  border-radius: 32px;
-  box-shadow: 5px 5px 5px 5px rgb(223, 215, 215);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%; 
-  box-sizing: border-box;
-}
-
-.search-button {
-  background-color: #ff385c;
-  border: none;
-  color: white;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-left: 8px;
+  align-items: center;
 }
-
-.ph-magnifying-glass {
-  font-size: 20px;
+.search-bar{
+  width: 848px;
+  height: 66px;
+  border: 0.5px solid #d4cfcf;
+  border-radius: 40px;
+  box-shadow: 0px 0px 13px 1px #e3dada;
+  display: flex;
+  align-items: center;
 }
-
-.box-text {
+.where-box{
+  width:230px;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  font-size: small;
-  margin: 0 10px;
+  align-items: center;
+}
+.where-box p, .where-box input{
+  width: 218px;
+}
+.where-box input, .checkin-box input, .checkout-box input, .guests-box input{
+  border: none;
+  height: 20px;
+  border-radius: 10px;
+}
+.where-box input:hover, .checkin-box input:hover, .checkout-box input:hover, .guests-box input:hover{
+  background-color: #f2f1f1;
+}
+input:focus{
+  border: none;
+  outline: none;
+}
+.checkin-box{
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.checkin-box p,.checkin-box input{
+  width: 92px;
 }
 
-#bottom-text {
-  color: gray;
+.checkout-box{
+  width:140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.checkout-box p,.checkout-box input{
+  width: 92px;
 }
 
-.vertical-line {
-  border-left: solid 0.5px rgb(185, 175, 175);
+.guests-box{
+  width:230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.guests-box p,.guests-box input{
+  width: 183px;
+}
+.where,.checkin,.checkout,.who{
+  font-size: 14px;
+  font-weight: 700;
+  height: 18px;
+}
+.where-box,.checkin-box,.checkout-box,.guests-box,.search-bt{
+  padding: 12px 21px;
   
 }
-
-.checkout-box,
-.guests-box,
-.checkin-box,
-.where-box {
-  padding-right: 12vh;
+.where-box:hover,.checkin-box:hover,.checkout-box:hover,.guests-box:hover{
+  background-color: #f2f1f1;
+  border-radius: 36px;
+  cursor: pointer;
 }
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .checkout-box,
-  .guests-box,
-  .checkin-box,
-  .where-box {
-    margin-right: 40px;
-  }
+.search-bt{
+  width: 60px;
+  
 }
-
-@media (max-width: 768px) {
-  .search-box {
-    flex-direction: column;
-    padding: 8px 12px;
-    height: auto;
-  }
-
-  .checkout-box,
-  .guests-box,
-  .checkin-box,
-  .where-box {
-    margin-right: 20px;
-  }
-
-  .search-button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .ph-magnifying-glass {
-    font-size: 18px;
-  }
+.search-button{
+  width: 48px;
+  height: 48px;
+  background-color: #FF5A5F;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in;
 }
-
-@media (max-width: 480px) {
-  .search-box {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .checkout-box,
-  .guests-box,
-  .checkin-box,
-  .where-box {
-    margin-right: 10px;
-  }
-
-  .box-text {
-    font-size: x-small;
-  }
-
-  .search-button {
-    width: 36px;
-    height: 36px;
-  }
-
-  .ph-magnifying-glass {
-    font-size: 16px;
-  }
+.search-button:hover {
+  background-color: #fa2229;
+  cursor: pointer;
 }
-
 .icon-section {
   display: flex;
   justify-content: space-around;
