@@ -175,9 +175,6 @@ width: 16px;
 }
 .where-box{
   width:230px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .where-box p, .where-box input{
   width: 218px;
@@ -196,9 +193,6 @@ input:focus{
 }
 .checkin-box{
   width: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .checkin-box p,.checkin-box input{
   width: 92px;
@@ -206,39 +200,44 @@ input:focus{
 
 .checkout-box{
   width:140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .checkout-box p,.checkout-box input{
   width: 92px;
 }
 
 .guests-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .guests-box p,.guests-box input{
   width: 183px;
 }
 .where,.checkin,.checkout,.who{
   font-size: 14px;
-  font-weight: 700;
-  height: 18px;
+  font-weight: 700;;
 }
-.where-box,.checkin-box,.checkout-box,.guests-box,.search-bt{
-  padding: 12px 8px;
+.search-item{
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
 }
-.where-box:hover,.checkin-box:hover,.checkout-box:hover,.guests-box:hover{
+.search-item p{
+  margin: 0;
+}
+.search-item input{
+  background-color: transparent;
+}
+.search-item:hover, .guests-box:hover{
   background-color: #f2f1f1;
   border-radius: 32px;
   cursor: pointer;
 }
 .search-bt{
-  width: 60px;
+  padding-right: 9px;
   
 }
 .search-button{
