@@ -333,3 +333,53 @@ justify-content: space-around;
 align-items: center;
 padding-top: 12px;
 }
+/* footer */
+.footer{
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+.up-footer{
+  width: 1360px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap:250px;
+    align-items: center;
+}
+.support-sec, .host-sec, .airbnb-sec{
+  flex: 1;
+}
+.sec-header {
+  font-size: 20px;
+  margin-bottom: 12px
+}
+.footer a{
+  display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.footer a:hover{
+  text-decoration: underline;
+
+}
+.down-footer{
+  display: flex;
+  width: 1360px;
+  height: 68px;
+  justify-content: space-between;
+  border-top:1px solid #e3e3e3;
+}
+.left-footer{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.right-footer{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
