@@ -278,19 +278,19 @@ width: 16px;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-
+  gap: 16px;
   flex: 1;
-  overflow-x: auto;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 .icon-slider {
   display: flex;
   align-items: center;
-  overflow: hidden;
   width: 80%;
   max-width: 1200px;
   margin: 20px auto;
   position: relative;
+  justify-content: center;
 }
 .icon-item {
   display: flex;
@@ -301,7 +301,7 @@ width: 16px;
   cursor: pointer;
   transition: transform 0.2s ease;
   color: grey;
-  gap: 30px;
+  gap: 5px;
 }
 
 .icon-item:hover {
@@ -315,14 +315,14 @@ width: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
   background-color: transparent;
+  color: grey;
 }
 
 .icon-text {
-  font-size: 12px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 .prev-btn,
 .next-btn {
@@ -331,10 +331,8 @@ width: 16px;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
