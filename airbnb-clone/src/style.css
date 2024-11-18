@@ -278,18 +278,19 @@ width: 16px;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  width: 80%;
-  overflow: hidden;
+
   flex: 1;
+  overflow-x: auto;
+  flex-wrap: nowrap;
 }
 .icon-slider {
   display: flex;
   align-items: center;
   overflow: hidden;
-  position: relative;
-  width: 100%;
+  width: 80%;
   max-width: 1200px;
   margin: 20px auto;
+  position: relative;
 }
 .icon-item {
   display: flex;
@@ -300,7 +301,7 @@ width: 16px;
   cursor: pointer;
   transition: transform 0.2s ease;
   color: grey;
-  gap: 10px;
+  gap: 30px;
 }
 
 .icon-item:hover {
@@ -311,13 +312,13 @@ width: 16px;
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
-  flex: 0 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  background-color: transparent;
 }
 
 .icon-text {
@@ -345,7 +346,10 @@ width: 16px;
   right: 10px;
 }
 .filter-button{
-  padding: 7px 0;
+ display: flex;
+ align-items: center;
+ padding: 10px 40px 10px 0;
+ border-radius: 25px;
 }
 .filter-icon{
   display: flex;
@@ -354,7 +358,8 @@ width: 16px;
   cursor: pointer;
   gap: 10px;
   border: 1px solid;
-  padding: 2px 16px 0 16px;
+  padding: 14px 16px 14px 16px;
+  box-sizing: border-box;
 }
 .category-icon{
 display: flex;
@@ -362,3 +367,7 @@ justify-content: space-around;
 align-items: center;
 padding-top: 12px;
 }
+.filter-text{
+  font-size: 14px;
+}
+

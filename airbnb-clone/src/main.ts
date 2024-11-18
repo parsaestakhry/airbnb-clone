@@ -8,8 +8,8 @@ const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 
 let currentIndex = 0;
-const iconWidth = 110; // عرض آیکون + فاصله بین آنها
-const visibleIcons = Math.floor(window.innerWidth / iconWidth); // تعداد آیکون‌های قابل نمایش
+const iconWidth = 110;
+const visibleIcons = Math.floor(window.innerWidth / iconWidth); 
 const totalIcons = document.querySelectorAll('.icon').length;
 
 nextBtn.addEventListener('click', () => {
