@@ -155,10 +155,6 @@ height: 100%;
 height: 16px;
 width: 16px;
 }
-.avatar{
-
-}
-
 .search-box {
   display: flex;
   justify-content: end;
@@ -284,8 +280,17 @@ width: 16px;
   padding: 10px;
   width: 80%;
   overflow: hidden;
+  flex: 1;
 }
-
+.icon-slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
 .icon-item {
   display: flex;
   flex-direction: column;
@@ -295,6 +300,7 @@ width: 16px;
   cursor: pointer;
   transition: transform 0.2s ease;
   color: grey;
+  gap: 10px;
 }
 
 .icon-item:hover {
@@ -305,10 +311,38 @@ width: 16px;
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
+  flex: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .icon-text {
   font-size: 12px;
+}
+.prev-btn,
+.next-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
 }
 .filter-button{
   padding: 7px 0;
