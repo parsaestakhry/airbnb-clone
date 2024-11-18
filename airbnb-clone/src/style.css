@@ -116,7 +116,7 @@ hr {
   position: absolute;
   top: 100%;
   right: 0;
-  display: none; /* در حالت عادی مخفی */
+  display: none;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
