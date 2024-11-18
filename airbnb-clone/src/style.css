@@ -282,6 +282,7 @@ input:focus{
 .age{
   border-bottom: 1px solid #ebebeb
 }
+/* icons */
 .icon-section {
   display: flex;
   justify-content: space-around;
