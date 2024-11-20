@@ -237,16 +237,17 @@ input:focus{
   background-color: transparent;
 }
 .search-item:hover, .guests-box:hover{
-  background-color: #615c5c;
-
+  background-color: #EBEBEB;
   cursor: pointer;
 }
 .bg-grey{
-  background-color: red;
+  background-color: #EBEBEB;
+}
+.bg-grey:hover{
+  background-color: #DDDDDD;
 }
 .search-bt{
   padding-right: 5px;
-  
 }
 .search-button{
   width: 48px;
