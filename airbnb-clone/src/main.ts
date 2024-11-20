@@ -8,7 +8,6 @@ const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
 const iconSection = document.querySelector(".icon-section");
 
-// Configuration
 const scrollAmount = 1000; // Number of pixels to scroll
 
 function updateButtonVisibility() {
