@@ -57,4 +57,10 @@ const activeSearchItems = (selectedItem: Element) => {
   };
 
   searchItems.forEach(item=> activeSearchItems(item))
+  // where menu
+const locations = document.querySelector(".where-box") as HTMLElement;
+const locationMenu = document.querySelector(".region-select") as HTMLElement;
+locations.addEventListener("click", () => {
+  locationMenu.classList.toggle("active");
+});
 
