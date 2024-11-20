@@ -15,6 +15,7 @@ box-sizing: border-box;
 font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
 Roboto, "Helvetica Neue", sans-serif;
 }
+/* header section */
 .header-container {
 display: flex;
 position: relative;
@@ -157,6 +158,7 @@ height: 100%;
 height: 16px;
 width: 16px;
 }
+/* search box */
 .search-box{
   width: 100%;
   display: flex;
@@ -235,14 +237,17 @@ input:focus{
 }
 .search-item input{
   background-color: transparent;
+  cursor: pointer;
+}
+.search-item input:hover{
+  background-color: #DDDDDD;
 }
 .search-item:hover, .guests-box:hover{
-  background-color: #615c5c;
-
+  background-color: #DDDDDD;
   cursor: pointer;
 }
 .bg-grey{
-  background-color: red;
+  background-color:#EBEBEB;
 }
 .search-bt{
   padding-right: 5px;
@@ -263,6 +268,7 @@ input:focus{
   background-color: #fa2229;
   cursor: pointer;
 }
+/* dropdown who */
 .who-menu{
   display: none;
   position: absolute;
@@ -280,14 +286,56 @@ input:focus{
 .who-menu.active{
   display: block;
 }
+.age{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 4px 24px 0;
+  gap: 70px;
+  border-bottom: 1px solid #ebebeb;
+}
+.inner-who-menu{
+  padding-left: 6px;
+  justify-content: space-between;
+}
+.plus-minus{
+  display: inline-flex;
+  gap: 10px;
+  width: 104px;
+  justify-content: center;
+}
+.count{
+  text-align: center;
+  position: relative;
+}
+.plus-button, .minus-button{
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+}
 .plus-button:hover{
   color: #222222;
   border-color: #222222;
   background: white;
 }
-.age{
-  border-bottom: 1px solid #ebebeb
+.minus-button svg{
+  text-align: center;
 }
+.bold-who-text{
+  font-weight: bold;
+}
+.age-range{
+  padding-top: 4px ;
+  color: #797979;
+}
+.pet-q{
+  padding-top: 4px ;
+  color: #797979;
+}
+/* icon section */
 .category-icon{
   display: flex;
   justify-content:space-between;
@@ -362,6 +410,7 @@ input:focus{
 .next-btn {
   right: 10px;
 }
+/* filter button */
 .filter-button{
  display: flex;
  align-items: center;
