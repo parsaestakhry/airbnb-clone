@@ -1,31 +1,25 @@
 @font-face {
-  font-family: bookAirbnb;
-  src: url(Font/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2) format("woff2");
+  font-family: "Airbnb Cereal VF";
+  src: url(/fonts/AirbnbCerealVF_W_Wght.woff2);
 }
-
 @font-face {
-  font-family: regular;
-  src: url(Font/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: boldFont;
-  src: url(Font/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2) format("woff2");
+  font-family: "Airbnb Cereal VF Cyril";
+  src: url(/fonts/AirbnbCerealVF_Cyril_W_Wght.woff2);
 }
 body {
 width: 100vw;
 overflow-x: hidden;
-padding: 0;
+padding: 0 40px;
 margin: 0;
 box-sizing: border-box;
+font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
+Roboto, "Helvetica Neue", sans-serif;
 }
 /* header section */
 .header-container {
 display: flex;
 position: relative;
 align-items: center;
-padding-left: 40px;
-padding-right: 40px;
 height: 80px;
 }
 .hamburger,
@@ -52,7 +46,7 @@ flex: 1;
 background-color: transparent;
 font-size: 16px;
 flex-direction: column;
-font-family:sans-serif;
+font-family:"Airbnb Cereal VF";
 font-weight: 500;
 padding: 0;
 padding: 10px 16px;
@@ -64,6 +58,15 @@ color: #b1aeae;
   color: #444242;
     background-color:#f2f1f1;
     border-radius: 22px;
+}
+.stay button, .exp button{
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #6a6a6a;
+  padding: 10px 12px;
+  border-radius: 3rem;
+  font-family: "Airbnb Cereal VF";
 }
 .home {
 text-decoration: none;
@@ -333,15 +336,31 @@ input:focus{
   color: #797979;
 }
 /* icon section */
+.category-icon{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 12px;
+  }
+
 .icon-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  width: 80%;
+  gap: 23px;
+  flex: 1;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
-
+.icon-slider {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-top: 20px;
+  position: relative;
+  justify-content: center;
+}
 .icon-item {
   display: flex;
   flex-direction: column;
@@ -350,25 +369,52 @@ input:focus{
   padding: 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  color: grey;
+  gap: 5px;
+  opacity: 0.7;
 }
 
 .icon-item:hover {
-  transform: scale(1.1);
+  opacity: 1;
 }
 
 .icon {
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  flex-direction: column;
+}
+.icon-text {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.prev-btn,
+.next-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    top: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.icon-text {
-  font-size: 12px;
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
 }
 /* filter button */
 .filter-button{
-  padding: 7px 0;
+ display: flex;
+ align-items: center;
+ border-radius: 25px;
 }
 .filter-icon{
   display: flex;
@@ -377,11 +423,11 @@ input:focus{
   cursor: pointer;
   gap: 10px;
   border: 1px solid;
-  padding: 2px 16px 0 16px;
+  padding: 14px 16px 14px 16px;
+  box-sizing: border-box;
 }
-.category-icon{
-display: flex;
-justify-content: space-around;
-align-items: center;
-padding-top: 12px;
+
+.filter-text{
+  font-size: 14px;
 }
+
