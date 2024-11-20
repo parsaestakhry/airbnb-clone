@@ -26,7 +26,8 @@ height: 80px;
 .home,
 .exp,
 .stay,
-.logo-name {
+.logo-name,
+.plus-button {
 cursor: pointer;
 }
 .left-header {
@@ -91,6 +92,9 @@ justify-content: end;
 align-items: center;
 flex: 1;
 }
+.menu{
+  position: relative;
+}
 
 .nav-menu{
   list-style-type: none;
@@ -153,122 +157,136 @@ height: 100%;
 height: 16px;
 width: 16px;
 }
-.search-box {
+.search-box{
+  width: 100%;
   display: flex;
-  justify-content: end;
-  align-items: center;
-  padding: 8px 16px;
-  height: 62px;
-  background-color: #fff;
-  border-radius: 32px;
-  box-shadow: 5px 5px 5px 5px rgb(223, 215, 215);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%; 
-  box-sizing: border-box;
-}
-
-.search-button {
-  background-color: #ff385c;
-  border: none;
-  color: white;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-left: 8px;
+  align-items: center;
+}
+.search-bar{
+  width: 848px;
+  height: 66px;
+  border: 0.5px solid #d4cfcf;
+  border-radius: 40px;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15), 0px 3px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  align-self: center;
+  position: relative;
+}
+.where-box{
+  width:230px;
+}
+.where-box p, .where-box input{
+  width: 218px;
+}
+.where-box input, .checkin-box input, .checkout-box input, .guests-box input{
+  border: none;
+  height: 20px;
+  border-radius: 10px;
+}
+.where-box input:hover, .checkin-box input:hover, .checkout-box input:hover, .guests-box input:hover{
+  background-color: #f2f1f1;
+}
+input:focus{
+  border: none;
+  outline: none;
+}
+.checkin-box{
+  width: 140px;
+}
+.checkin-box p,.checkin-box input{
+  width: 92px;
 }
 
-.ph-magnifying-glass {
-  font-size: 20px;
+.checkout-box{
+  width:140px;
+}
+.checkout-box p,.checkout-box input{
+  width: 92px;
 }
 
-.box-text {
+.guests-box{
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.guests-box p,.guests-box input{
+  width: 183px;
+}
+.where,.checkin,.checkout,.who{
+  font-size: 14px;
+  font-weight: 700;;
+}
+.search-item{
+  padding: 12px 24px;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
-  font-size: small;
-  margin: 0 10px;
+  justify-content: center;
+  border-radius: 32px;
 }
-
-#bottom-text {
-  color: gray;
+.bg-white{
+  background-color: white;
 }
+.search-item p{
+  margin: 0;
+}
+.search-item input{
+  background-color: transparent;
+}
+.search-item:hover, .guests-box:hover{
+  background-color: #615c5c;
 
-.vertical-line {
-  border-left: solid 0.5px rgb(185, 175, 175);
+  cursor: pointer;
+}
+.bg-grey{
+  background-color: red;
+}
+.search-bt{
+  padding-right: 5px;
   
 }
-
-.checkout-box,
-.guests-box,
-.checkin-box,
-.where-box {
-  padding-right: 12vh;
+.search-button{
+  width: 48px;
+  height: 48px;
+  background-color: #FF5A5F;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in;
+  z-index: 0;
 }
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .checkout-box,
-  .guests-box,
-  .checkin-box,
-  .where-box {
-    margin-right: 40px;
-  }
+.search-button:hover {
+  background-color: #fa2229;
+  cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  .search-box {
-    flex-direction: column;
-    padding: 8px 12px;
-    height: auto;
-  }
-
-  .checkout-box,
-  .guests-box,
-  .checkin-box,
-  .where-box {
-    margin-right: 20px;
-  }
-
-  .search-button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .ph-magnifying-glass {
-    font-size: 18px;
-  }
+.who-menu{
+  display: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background: #FFFFFF;
+  border-radius: 32px ;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 12px ;
+  overflow-x: hidden ;
+  overflow-y: auto ;
+  padding: 16px 32px ;
+  top: 100%;
 }
-
-@media (max-width: 480px) {
-  .search-box {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .checkout-box,
-  .guests-box,
-  .checkin-box,
-  .where-box {
-    margin-right: 10px;
-  }
-
-  .box-text {
-    font-size: x-small;
-  }
-
-  .search-button {
-    width: 36px;
-    height: 36px;
-  }
-
-  .ph-magnifying-glass {
-    font-size: 16px;
-  }
+.who-menu.active{
+  display: block;
+}
+.plus-button:hover{
+  color: #222222;
+  border-color: #222222;
+  background: white;
+}
+.age{
+  border-bottom: 1px solid #ebebeb
 }
 .category-icon{
   display: flex;
