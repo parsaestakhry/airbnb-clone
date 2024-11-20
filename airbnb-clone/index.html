@@ -490,12 +490,129 @@
       <img src="/images/next.svg" alt="" class="next-btn" width="16px" height="16px">
               <!-- filter button -->
             </div>
-            <div class="filter-button">
+            <div class="filter-container">
+              <div class="filter-button">
                 <div class="filter-icon">
                   <img src="images/filter.svg" alt=""   width="16"
                   height="16"/>
                   <span class="filter-text">Filters</span>
                 </div>
+                <!-- filter dropdown -->
+                 <div class="filter-dropdown">
+                  <!-- Type of Place -->
+                  <div class="filter-section">
+                  <h1>Type of place</h1>
+                  <div class="type-of-place">Any type</div>
+                  <div class="type-of-place">Room</div>
+                  <div class="type-of-place">Entire home</div>
+                  </div>
+                  <!-- Price Range -->
+                   <div class="filter-section">
+                  <h1>Price range</h1>
+                  <p>Nightly prices including fees and taxes</p>
+                  <input type="range" id="price-range" min="10" max="1000" step="10">
+                  <div>
+                    <label id="price_filter_min" for="price_filter_min" class="">Minimum</label>
+                    <span>€</span>
+                    <input type="number" value="€9">
+                   </div>
+                 </div>
+                 <!-- Rooms and Beds -->
+                  <div class="filter-section">
+                    <h1>Rooms and beds</h1>
+                  <div class="Bedrooms">
+                    <div class="bedroom-text">Bedrooms</div>
+                  <div class="plus-minus">
+                    <button class="minus-button">
+                      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                        <path d="m2 16h28"></path>
+                      </svg>
+                    </button>
+                    <div class="count">0</div>
+                    <button class="plus-button">
+                      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                        <path d="m2 16h28m-14-14v28"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  </div>
+                  <div class="Beds">
+                    <div class="bed-text">Beds</div>
+                  <div class="plus-minus">
+                    <button class="minus-button">
+                      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                        <path d="m2 16h28"></path>
+                      </svg>
+                    </button>
+                    <div class="count">0</div>
+                    <button class="plus-button">
+                      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                        <path d="m2 16h28m-14-14v28"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  </div>
+                  <div class="Bathrooms">
+                    <div class="bath-text">Bathrooms</div>
+                  <div class="plus-minus">
+                    <button class="minus-button">
+                      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                        <path d="m2 16h28"></path>
+                      </svg>
+                    </button>
+                    <div class="count">0</div>
+                    <button class="plus-button">
+                      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
+                        focusable="false"
+                        style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                        <path d="m2 16h28m-14-14v28"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                  </div>
+                   <!-- Amenities -->
+                    <div class="filter-section">
+                      <h1>Amenities</h1>
+                      <div class="Amenities">
+                        <div class="Essentials"></div>
+                        <div class="Features"></div>
+                        <div class="Location"></div>
+                        <div class="Safety"></div>
+                      </div>
+                    </div>
+                    <!-- Booking Options -->
+                     <div class="filter-section">
+                      <h1>Booking options</h1>
+                     </div>
+                     <!-- Standout Stays -->
+                      <div class="filter-section">
+                        <h1>Standout stays
+                        </h1>
+                      </div>
+                      <!-- Property Type -->
+                       <div class="filter-section">
+                        <h1>Property type</h1>
+                       </div>
+                       <!-- Accessibility Features -->
+                        <div class="filter-section">
+                          <h1>Accessibility features</h1>
+                        </div>
+                         <!-- Host Language -->
+                         <div class="filter-section">
+                          <h1>Host language</h1>
+                         </div>
+            </div>
   <script src="src/main.ts"></script>
 <!-- main box -->
  <!-- Inspiration for future getaways -->
