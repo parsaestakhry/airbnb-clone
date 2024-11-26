@@ -4,11 +4,10 @@ hamburger.addEventListener("click", () => {
 menu.classList.toggle("active");
 });
 // slide show
-const prevBtn = document.querySelector(".prev-btn");
-const nextBtn = document.querySelector(".next-btn");
-const iconSection = document.querySelector(".icon-section");
+const prevBtn = document.querySelector(".prev-btn")  as HTMLElement;
+const nextBtn = document.querySelector(".next-btn")  as HTMLElement;
+const iconSection = document.querySelector(".icon-section")  as HTMLElement;
 
-const scrollAmount = 1000; // Number of pixels to scroll
 
 function updateButtonVisibility() {
   if (iconSection.scrollLeft === 0) {
@@ -26,14 +25,14 @@ function updateButtonVisibility() {
 
 prevBtn.addEventListener("click", () => {
   iconSection.scrollBy({
-    left: -scrollAmount,
+    left: -iconSection.clientWidth,
     behavior: "smooth",
   });
 });
 
 nextBtn.addEventListener("click", () => {
   iconSection.scrollBy({
-    left: scrollAmount,
+    left: iconSection.clientWidth,
     behavior: "smooth",
   });
 });
@@ -63,4 +62,42 @@ const locationMenu = document.querySelector(".region-select") as HTMLElement;
 locations.addEventListener("click", () => {
   locationMenu.classList.toggle("active");
 });
+// exp searchbox
+const expTab = document.querySelector (".exp");
+const stayTab = document.querySelector(".stay");
+const checkinBox= document.querySelector (".checkin-box");
+const checkoutBox = document.querySelector (".checkout-box");
+const dateBox = document.querySelector (".date-box");
+expTab?.addEventListener("click",() =>{
+checkinBox?.classList.add("display-none")
+checkoutBox?.classList.add("display-none")
+dateBox?.classList.remove("display-none")
+}
+)
+stayTab?.addEventListener("click",() =>{
+  checkinBox?.classList.remove("display-none")
+  checkoutBox?.classList.remove("display-none")
+  dateBox?.classList.add("display-none")
+  }
+  )
+// plus-minus
+const plusButton = document.querySelector(".plus-button");
+const minusButton = document.querySelector(".minus-button");
+let count = 0;
+plusButton?.addEventListener("click",() =>{
+count ++;
+const element =   document.getElementById("adultCount")
+if(element){
+  element.innerHTML = count.toString()
+}
+}
+);
 
+minusButton?.addEventListener("click",() =>{
+  count --;
+  const element =   document.getElementById("adultCount")
+  if(element){
+    element.innerHTML = count.toString()
+  }
+  }
+  );

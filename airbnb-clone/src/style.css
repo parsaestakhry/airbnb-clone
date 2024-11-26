@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Airbnb Cereal VF";
-  src: url(/fonts/AirbnbCerealVF_W_Wght.woff2);
+  src: url("../Font/AirbnbCerealVF_Arabic_W_Wght.woff2");
 }
 @font-face {
   font-family: "Airbnb Cereal VF Cyril";
-  src: url(/fonts/AirbnbCerealVF_Cyril_W_Wght.woff2);
+  src: url("../Font/AirbnbCerealVF_Cyril_W_Wght.woff2");
 }
 body {
 width: 100vw;
@@ -12,8 +12,7 @@ overflow-x: hidden;
 padding: 0 40px;
 margin: 0;
 box-sizing: border-box;
-font-family: "Airbnb Cereal VF", Circular, -apple-system, BlinkMacSystemFont,
-Roboto, "Helvetica Neue", sans-serif;
+font-family: "Airbnb Cereal VF";
 }
 /* header section */
 .header-container {
@@ -28,7 +27,8 @@ height: 80px;
 .exp,
 .stay,
 .logo-name,
-.plus-button {
+.plus-button,
+.minus-button {
 cursor: pointer;
 }
 .left-header {
@@ -47,14 +47,13 @@ background-color: transparent;
 font-size: 16px;
 flex-direction: column;
 font-family:"Airbnb Cereal VF";
-font-weight: 500;
 padding: 0;
 padding: 10px 16px;
 border: unset;
 transition: 0.2s ease-in;
 color: #b1aeae;
 }
-.stay, .exp:hover{
+.stay:hover, .exp:hover{
   color: #444242;
     background-color:#f2f1f1;
     border-radius: 22px;
@@ -79,12 +78,20 @@ border-radius: 22px;
 }
 .home-container {
 margin-right: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .language {
-padding: 12px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 .language:hover{
-border-radius: 22px;
 background-color: #EBEBEB;
 }
 .right-header {
@@ -166,7 +173,6 @@ width: 16px;
   align-items: center;
 }
 .search-bar{
-  width: 848px;
   height: 66px;
   border: 0.5px solid #d4cfcf;
   border-radius: 40px;
@@ -180,15 +186,12 @@ width: 16px;
 .where-box{
   width:230px;
 }
-.where-box p, .where-box input{
-  width: 218px;
-}
-.where-box input, .checkin-box input, .checkout-box input, .guests-box input{
+.where-box input, .checkin-box input, .checkout-box input, .guests-box input, .date-box input{
   border: none;
   height: 20px;
   border-radius: 10px;
 }
-.where-box input:hover, .checkin-box input:hover, .checkout-box input:hover, .guests-box input:hover{
+.where-box input:hover, .checkin-box input:hover, .checkout-box input:hover, .guests-box input:hover, .date-box input:hover{
   background-color: #f2f1f1;
 }
 input:focus{
@@ -208,11 +211,14 @@ input:focus{
 .checkout-box p,.checkout-box input{
   width: 92px;
 }
+.date-box{
+  width: 280px;
+}
 
 .guests-box{
   border-radius: 32px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 .guests-box p,.guests-box input{
@@ -228,6 +234,7 @@ input:focus{
   flex-direction: column;
   justify-content: center;
   border-radius: 32px;
+  position: relative;
 }
 .bg-white{
   background-color: white;
@@ -251,6 +258,8 @@ input:focus{
 }
 .search-bt{
   padding-right: 5px;
+  position: absolute;
+  right: 0;
 }
 .search-button{
   width: 48px;
@@ -267,6 +276,41 @@ input:focus{
   background-color: #fa2229;
   cursor: pointer;
 }
+
+.guests-search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* where dropdown */
+.region-select{
+  display: none;
+  margin-top: 12px;
+  padding: 32px 24px 24px 24px;
+  width: auto;
+  z-index: 1;
+  background: #FFFFFF;
+  border-radius: 32px ;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  top: 100%;
+  position: absolute;
+  left: 0;
+}
+.region-select.active{
+  display: block;
+}
+.continents{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.region-item img{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 /* dropdown who */
 .who-menu{
   display: none;
@@ -301,6 +345,7 @@ input:focus{
   gap: 10px;
   width: 104px;
   justify-content: center;
+  align-items: center;
 }
 .count{
   text-align: center;
@@ -314,6 +359,9 @@ input:focus{
   height: 32px;
   width: 32px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .plus-button:hover{
   color: #222222;
@@ -333,6 +381,12 @@ input:focus{
 .pet-q{
   padding-top: 4px ;
   color: #797979;
+}
+.display-none{
+  display: none;
+}
+.display-block{
+  display: block;
 }
 /* icon section */
 .category-icon{
@@ -375,7 +429,15 @@ input:focus{
 .icon-item:hover {
   opacity: 1;
 }
-
+.icon-item::after{
+  width: 30px;
+  height: 2px;
+content: "";
+border-radius: 20px;
+}
+.icon-item:hover::after{
+  background-color: #717171;
+}
 .icon {
   width: 24px;
   height: 24px;
@@ -429,29 +491,16 @@ input:focus{
 .filter-text{
   font-size: 14px;
 }
-/* where dropdown */
-.region-select{
-  display: none;
-  margin-top: 12px;
-  padding: 32px 24px 24px 24px;
-  overflow-x: hidden ;
-  overflow-y: auto ;
-  right: 0;
-  z-index: 1;
-  background: #FFFFFF;
-  border-radius: 32px ;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-  top: 100%;
+.where-box, .checkout-box, .checkin-box{
+  position: relative;
 }
-.region-select.active{
-  display: block;
-}
-.region-item{
-display: flex;
-flex-wrap: wrap;
-}
-.region-item img{
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+.where-box::after, .date-box::after, .checkout-box::after, .checkin-box ::after{
+  width: 1px;
+  height: 40px;
+  background-color: #dfdfdf;
+  content: "";
+  position: absolute;
+  right:0;
+  top: 50%;
+  transform: translate(0, -50%);
 }
