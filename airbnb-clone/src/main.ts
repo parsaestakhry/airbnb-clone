@@ -42,8 +42,14 @@ updateButtonVisibility();
 // who-menu
 const guests = document.querySelector(".guests-box") as HTMLElement;
 const guestMenu = document.querySelector(".who-menu") as HTMLElement;
-guests.addEventListener("click", () => {
+guests.addEventListener("click", (event: MouseEvent) => {
 guestMenu.classList.toggle("active");
+event.stopPropagation();
+});
+document.addEventListener("click", (event: MouseEvent) => {
+  if (!guests.contains(event.target as Node) && !guestMenu.contains(event.target as Node)) {
+    guestMenu.classList.remove("active");
+  }
 });
 const searchItems = document.querySelectorAll(".search-item");
 const searchBar = document.querySelector(".search-bar") as HTMLElement;
@@ -54,7 +60,6 @@ const activeSearchItems = (selectedItem: Element) => {
       searchBar?.classList.add("bg-grey");
     });
   };
-
   searchItems.forEach(item=> activeSearchItems(item))
   // where menu
 const locations = document.querySelector(".where-box") as HTMLElement;
@@ -62,6 +67,7 @@ const locationMenu = document.querySelector(".region-select") as HTMLElement;
 locations.addEventListener("click", () => {
   locationMenu.classList.toggle("active");
 });
+
 // exp searchbox
 const expTab = document.querySelector (".exp");
 const stayTab = document.querySelector(".stay");
