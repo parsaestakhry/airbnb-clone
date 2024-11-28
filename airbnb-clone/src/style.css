@@ -295,6 +295,7 @@ input:focus{
   top: 100%;
   position: absolute;
   left: 0;
+  height: auto;
 }
 .region-select.active{
   display: block;
@@ -302,15 +303,39 @@ input:focus{
 .continents{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  margin: 0 auto;
+}
+.region-text{
+  margin: 0 0 16px 8px ;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Airbnb Cereal VF";
 }
 
 .region-item img{
-  width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100px;
   cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 0.4rem;
+  transition: transform 0.25s ease;
+  border: 1px solid #DDDDDD;
 }
-
+.region-item{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.region-item:hover {
+  background-color: #EBEBEB;
+  border-radius: 1rem;
+}
+.country-text{
+  font-size: 14px;
+  font-family: "Airbnb Cereal VF";
+  margin: 0 2px;
+}
 /* dropdown who */
 .who-menu{
   display: none;
@@ -450,8 +475,9 @@ border-radius: 20px;
   flex-direction: column;
 }
 .icon-text {
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
+font-family: "Airbnb Cereal VF";
 }
 .prev-btn,
 .next-btn {
