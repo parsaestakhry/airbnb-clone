@@ -430,3 +430,6 @@ input:focus{
   font-size: 14px;
 }
 
+.checkin-container{
+  display: none;
+}
