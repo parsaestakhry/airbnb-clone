@@ -81,8 +81,8 @@ stayTab?.addEventListener("click",() =>{
   }
   )
 // plus-minus
-const plusButton = document.querySelector(".plus-button");
-const minusButton = document.querySelector(".minus-button");
+const plusButton = document.querySelector(".plus-button-adult");
+const minusButton = document.querySelector(".minus-button-adult");
 let count = 0;
 plusButton?.addEventListener("click",() =>{
 count ++;
@@ -101,3 +101,63 @@ minusButton?.addEventListener("click",() =>{
   }
   }
   );
+// 
+const plusChildButton = document.querySelector(".plus-button-child");
+const minusChildButton = document.querySelector(".minus-button-child");
+plusChildButton?.addEventListener("click",() =>{
+count ++;
+const element =   document.getElementById("childCount")
+if(element){
+  element.innerHTML = count.toString()
+}
+}
+);
+
+minusChildButton?.addEventListener("click",() =>{
+  count --;
+  const element =   document.getElementById("childCount")
+  if(element){
+    element.innerHTML = count.toString()
+  }
+  }
+  );
+  // 
+  const plusInfantButton = document.querySelector(".plus-button-infant");
+const minusInfantButton = document.querySelector(".minus-button-infant");
+plusInfantButton?.addEventListener("click",() =>{
+count ++;
+const element =   document.getElementById("infantCount")
+if(element){
+  element.innerHTML = count.toString()
+}
+}
+);
+
+minusInfantButton?.addEventListener("click",() =>{
+  count --;
+  const element =   document.getElementById("infantCount")
+  if(element){
+    element.innerHTML = count.toString()
+  }
+  }
+  );
+  // 
+  const plusPetButton = document.querySelector(".plus-button-pet");
+  const minusPetButton = document.querySelector(".minus-button-pet");
+  plusPetButton?.addEventListener("click",() =>{
+  count ++;
+  const element =   document.getElementById("petount")
+  if(element){
+    element.innerHTML = count.toString()
+  }
+  }
+  );
+  
+  minusPetButton?.addEventListener("click",() =>{
+    count --;
+    const element =   document.getElementById("petCount")
+    if(element){
+      element.innerHTML = count.toString()
+    }
+    }
+    );
