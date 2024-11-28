@@ -5,6 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <script src="jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,7 +99,7 @@
 <div class="checkin-month">Months</div>
 <div class="checkin-flex">Flexible</div>
         </div>
-
+        <input type="text" id="daterange" class="checkin-input"/>
        </div>
       <div class="checkout-box search-item">
         <p class="checkout">Check Out</p>
@@ -505,10 +511,11 @@
                   height="16"/>
                   <span class="filter-text">Filters</span>
                 </div>
-  <script src="src/main.ts"></script>
+
 <!-- main box -->
  <!-- Inspiration for future getaways -->
   <!-- Footer -->
    <!-- footer links -->
+   <script src="src/main.ts"></script>
 </body>
 </html>

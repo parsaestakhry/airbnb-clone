@@ -58,3 +58,11 @@ const activeSearchItems = (selectedItem: Element) => {
 
   searchItems.forEach(item=> activeSearchItems(item))
 
+// check in
+const checkIn = document.querySelector(".checkin-box") as HTMLElement;
+const checkInCal = document.querySelector(".checkin-container") as HTMLElement;
+checkIn.addEventListener("click", () => {
+  checkInCal.classList.toggle("active");
+});
+
+// 
