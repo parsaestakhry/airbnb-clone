@@ -528,7 +528,7 @@ input:focus{
 .ins-btn:hover{
   opacity: 1;
 }
-.tab-wrapper{
+.tab-content{
   display: none;
 }
 .tab-list{
