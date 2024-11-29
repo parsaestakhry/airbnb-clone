@@ -57,4 +57,3 @@ const activeSearchItems = (selectedItem: Element) => {
   };
 
   searchItems.forEach(item=> activeSearchItems(item))
-

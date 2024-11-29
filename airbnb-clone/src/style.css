@@ -496,3 +496,42 @@ input:focus{
   background-color: white; 
   text-align: left;
 }
+/*  */
+.down-section{
+  padding-top: 48px ;
+  padding-bottom: 48px;
+}
+.inspiration-container h6{
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-family: "Airbnb Cereal VF";
+
+}
+.ins-btn{
+  border-radius: 8px;
+  margin: 6px 6px 6px -10px;
+  padding: 10px;
+  height: 40px;
+  position: relative;
+  border: none ;
+  background-color: transparent;
+  float: left;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.6;
+}
+.ins-btn:hover{
+  opacity: 1;
+}
+.tab-wrapper{
+  display: none;
+}
+.tab-list{
+  overflow: hidden;
+  width: 100%;
+}
