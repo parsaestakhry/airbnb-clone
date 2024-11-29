@@ -65,4 +65,21 @@ checkIn.addEventListener("click", () => {
   checkInCal.classList.toggle("active");
 });
 
-// 
+
+// import $ from 'jquery'; 
+// import 'daterangepicker'; 
+// import 'daterangepicker/daterangepicker.css';
+// import moment from 'moment'; 
+// $(function() {
+//   $('#dateRange').daterangepicker({
+//     locale: {
+//       format: 'YYYY-MM-DD',
+//       applyLabel: 'Apply',
+//       cancelLabel: 'Cancel',
+//     },
+//     startDate: moment().startOf('month'),
+//     endDate: moment().endOf('month'),
+//   });
+// });
+
+

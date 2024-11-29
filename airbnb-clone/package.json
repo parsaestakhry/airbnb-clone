@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.32",
+    "postcss": "^8.4.49",
     "typescript": "~5.6.2",
     "vite": "^5.4.9"
   },

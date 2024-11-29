@@ -6,6 +6,7 @@
   font-family: "Airbnb Cereal VF Cyril";
   src: url(/fonts/AirbnbCerealVF_Cyril_W_Wght.woff2);
 }
+@import 'daterangepicker/daterangepicker.css';
 body {
 width: 100vw;
 overflow-x: hidden;
