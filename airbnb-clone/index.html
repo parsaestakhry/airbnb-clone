@@ -5,11 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/style.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="datepicker/daterangepicker.css" />
   <script src="jquery-3.7.1.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -94,12 +91,17 @@
       </div>
       <!-- check in dropdown -->
        <div class="checkin-container">
-        <div class="checkin-header">
-<div class="checkin-date">Dates</div>
-<div class="checkin-month">Months</div>
-<div class="checkin-flex">Flexible</div>
-        </div>
-        <input type="text" id="daterange" class="checkin-input"/>
+        <div class="checkin-dropdown">
+          <div class="checkin-header">
+  <div class="checkin-date">
+    Dates
+      <input type="text" id="daterange" class="checkin-input" placeholder="Dates"/>
+  </div>
+  <div class="checkin-month">Months</div>
+  <div class="checkin-flex">Flexible</div>
+          </div>
+          
+         </div>
        </div>
       <div class="checkout-box search-item">
         <p class="checkout">Check Out</p>
@@ -511,11 +513,52 @@
                   height="16"/>
                   <span class="filter-text">Filters</span>
                 </div>
-
+              </div>
+            </div>
 <!-- main box -->
  <!-- Inspiration for future getaways -->
   <!-- Footer -->
    <!-- footer links -->
    <script src="src/main.ts"></script>
+   <script type="text/javascript" src="datepicker/js/jquery.min.js"></script>
+   <script type="text/javascript" src="datepicker/js/moment.min.js"></script>
+   <script type="text/javascript" src="datepicker/js/daterangepicker.min.js"></script>
+ 
+   <script type="text/javascript">
+     $(document).ready(function () {
+       $('#daterange').daterangepicker({
+         parentEl: '#dates_calendar', // Set parent container
+         singleDatePicker: false,
+         autoUpdateInput: false,
+         autoApply: true,
+         opens: 'center',
+         locale: {
+           format: 'MM/DD/YYYY', // Customize the date format
+           separator: ' - ',
+           monthNames: [
+             "January", "February", "March", "April", "May", "June",
+             "July", "August", "September", "October", "November", "December"
+           ],
+           // applyLabel: 'Apply',
+           // cancelLabel: 'Cancel',
+           // fromLabel: 'From',
+           // toLabel: 'To',
+           // customRangeLabel: 'Custom',
+ 
+         },
+         startDate: moment().startOf('day'), // Default start date
+         endDate: moment().startOf('day').add(1, 'days'), // Default end date
+         minDate: moment().startOf('month'), // Disallow past dates
+         minDate: moment().startOf('day'),
+         maxDate: moment().add(4, 'year'), // Set a max date
+       },
+         function (start, end, label) {
+           console.log('Check-in: ' + start.format('YYYY-MM-DD') + ', Check-out ' + end.format('YYYY-MM-DD'));
+         }
+       );
+ 
+     });
+ 
+   </script>
 </body>
 </html>

@@ -6,7 +6,6 @@
   font-family: "Airbnb Cereal VF Cyril";
   src: url(/fonts/AirbnbCerealVF_Cyril_W_Wght.woff2);
 }
-@import 'daterangepicker/daterangepicker.css';
 body {
 width: 100vw;
 overflow-x: hidden;
@@ -432,18 +431,44 @@ input:focus{
 }
 
 .checkin-container{
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background: #FFFFFF;
-  border-radius: 32px ;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-  margin-top: 12px ;
-  overflow-x: hidden ;
-  overflow-y: auto ;
-  padding: 16px 32px ;
+  position: none;
+  width: 100%;
+  max-height: 297px;
+  box-shadow: 0 3px 12px 0 rgb(0 0 0/0.15);
+  left: 0;
+  right: 0;
   top: 100%;
+  margin-top: 0.7rem;
+  padding: 1rem 2rem;
+  border-radius: 32px;
+  overflow-x: hidden;
+  z-index: 1;
 }
-.checkin-container.active{
-display: block;
+.checkin-dropdown{
+  position: relative;
+  padding: 18px 28px 10px;
+  display: none;
+}
+.checkin-header{
+  display: none;
+  border: 2px solid #EBEBEB;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+ background-color: #EBEBEB;
+ padding: 0 4px;
+ gap: 24px;
+ margin: 0 auto;
+ border-radius: 30px;
+
+}
+.checkin-date, .checkin-month, .checkin-flex{
+  padding: 8px 12px;
+  margin: 4px 2px 4px 0;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+  font-family: "roboto";
+  border-radius: 100px;
+  position: relative;
+  display: none;
 }
