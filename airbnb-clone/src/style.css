@@ -7,12 +7,14 @@
   src: url(/fonts/AirbnbCerealVF_Cyril_W_Wght.woff2);
 }
 body {
-width: 100vw;
+  width: 100vw;
 overflow-x: hidden;
-padding: 0 80px;
 margin: 0;
 box-sizing: border-box;
 font-family: "Airbnb Cereal VF";
+}
+main{
+  padding: 0 80px;
 }
 /* header section */
 .header-container {
@@ -500,6 +502,7 @@ input:focus{
 .footer{
   padding: 0 80px;
   background-color: #f8f8f8;
+  width: 100%;
 }
 
 .up-footer{
