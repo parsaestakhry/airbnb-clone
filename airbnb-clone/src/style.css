@@ -1,35 +1,24 @@
 @font-face {
-  font-family: XMAirbnb;
-  src: url(Font/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2) format("woff2");
+  font-family: "Airbnb Cereal VF";
+  src: url(/fonts/AirbnbCerealVF_W_Wght.woff2);
 }
-
 @font-face {
-  font-family: bookAirbnb;
-  src: url(Font/Airbnb_Cereal-Book-9a1c9cca9bb3d65fefa2aa487617805e.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: regular;
-  src: url(Font/Airbnb_Cereal-Medium-50fc004b3082375f12ff0cfb67bf8e56.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: boldFont;
-  src: url(Font/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2) format("woff2");
+  font-family: "Airbnb Cereal VF Cyril";
+  src: url(/fonts/AirbnbCerealVF_Cyril_W_Wght.woff2);
 }
 body {
 width: 100vw;
 overflow-x: hidden;
-padding: 0;
+padding: 0 80px;
 margin: 0;
 box-sizing: border-box;
+font-family: "Airbnb Cereal VF";
 }
+/* header section */
 .header-container {
 display: flex;
 position: relative;
 align-items: center;
-padding-left: 40px;
-padding-right: 40px;
 height: 80px;
 }
 .hamburger,
@@ -56,7 +45,7 @@ flex: 1;
 background-color: transparent;
 font-size: 16px;
 flex-direction: column;
-font-family:sans-serif;
+font-family:"Airbnb Cereal VF";
 font-weight: 500;
 padding: 0;
 padding: 10px 16px;
@@ -68,6 +57,15 @@ color: #b1aeae;
   color: #444242;
     background-color:#f2f1f1;
     border-radius: 22px;
+}
+.stay button, .exp button{
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #6a6a6a;
+  padding: 10px 12px;
+  border-radius: 3rem;
+  font-family: "Airbnb Cereal VF";
 }
 .home {
 text-decoration: none;
@@ -93,6 +91,9 @@ display: flex;
 justify-content: end;
 align-items: center;
 flex: 1;
+}
+.menu{
+  position: relative;
 }
 
 .nav-menu{
@@ -156,6 +157,7 @@ height: 100%;
 height: 16px;
 width: 16px;
 }
+/* search box */
 .search-box{
   width: 100%;
   display: flex;
@@ -172,12 +174,10 @@ width: 16px;
   align-items: center;
   transition: all 0.2s;
   align-self: center;
+  position: relative;
 }
 .where-box{
   width:230px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .where-box p, .where-box input{
   width: 218px;
@@ -196,9 +196,6 @@ input:focus{
 }
 .checkin-box{
   width: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .checkin-box p,.checkin-box input{
   width: 92px;
@@ -206,40 +203,53 @@ input:focus{
 
 .checkout-box{
   width:140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .checkout-box p,.checkout-box input{
   width: 92px;
 }
 
 .guests-box{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .guests-box p,.guests-box input{
   width: 183px;
 }
 .where,.checkin,.checkout,.who{
   font-size: 14px;
-  font-weight: 700;
-  height: 18px;
+  font-weight: 700;;
 }
-.where-box,.checkin-box,.checkout-box,.guests-box,.search-bt{
-  padding: 12px 8px;
-  
-}
-.where-box:hover,.checkin-box:hover,.checkout-box:hover,.guests-box:hover{
-  background-color: #f2f1f1;
+.search-item{
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 32px;
+}
+.bg-white{
+  background-color: white;
+}
+.search-item p{
+  margin: 0;
+}
+.search-item input{
+  background-color: transparent;
   cursor: pointer;
 }
+.search-item input:hover{
+  background-color: #DDDDDD;
+}
+.search-item:hover, .guests-box:hover{
+  background-color: #DDDDDD;
+  cursor: pointer;
+}
+.bg-grey{
+  background-color:#EBEBEB;
+}
 .search-bt{
-  width: 60px;
-  
+  padding-right: 5px;
 }
 .search-button{
   width: 48px;
@@ -256,42 +266,99 @@ input:focus{
   background-color: #fa2229;
   cursor: pointer;
 }
+/* dropdown who */
 .who-menu{
   display: none;
   position: absolute;
-  top: 100%;
   right: 0;
   z-index: 1;
   background: #FFFFFF;
   border-radius: 32px ;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
   margin-top: 12px ;
-  max-height: calc(100vh - 220px) ;
   overflow-x: hidden ;
   overflow-y: auto ;
   padding: 16px 32px ;
+  top: 100%;
 }
 .who-menu.active{
   display: block;
+}
+.age{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 4px 24px 0;
+  gap: 70px;
+  border-bottom: 1px solid #ebebeb;
+}
+.inner-who-menu{
+  padding-left: 6px;
+  justify-content: space-between;
+}
+.plus-minus{
+  display: inline-flex;
+  gap: 10px;
+  width: 104px;
+  justify-content: center;
+}
+.count{
+  text-align: center;
+  position: relative;
+}
+.plus-button, .minus-button{
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  height: 32px;
+  width: 32px;
+  text-align: center;
 }
 .plus-button:hover{
   color: #222222;
   border-color: #222222;
   background: white;
 }
-.age{
-  border-bottom: 1px solid #ebebeb
+.minus-button svg{
+  text-align: center;
 }
-/* icons */
+.bold-who-text{
+  font-weight: bold;
+}
+.age-range{
+  padding-top: 4px ;
+  color: #797979;
+}
+.pet-q{
+  padding-top: 4px ;
+  color: #797979;
+}
+/* icon section */
+.category-icon{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 12px;
+  }
+
 .icon-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  width: 80%;
+  gap: 23px;
+  flex: 1;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
-
+.icon-slider {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-top: 20px;
+  position: relative;
+  justify-content: center;
+}
 .icon-item {
   display: flex;
   flex-direction: column;
@@ -300,24 +367,52 @@ input:focus{
   padding: 5px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  color: grey;
+  gap: 5px;
+  opacity: 0.7;
 }
 
 .icon-item:hover {
-  transform: scale(1.1);
+  opacity: 1;
 }
 
 .icon {
   width: 24px;
   height: 24px;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+  flex-direction: column;
+}
+.icon-text {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.prev-btn,
+.next-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    top: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.icon-text {
-  font-size: 12px;
+.prev-btn {
+  left: 10px;
 }
+
+.next-btn {
+  right: 10px;
+}
+/* filter button */
 .filter-button{
-  padding: 7px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
 }
 .filter-icon{
   display: flex;
@@ -326,13 +421,80 @@ input:focus{
   cursor: pointer;
   gap: 10px;
   border: 1px solid;
-  padding: 2px 16px 0 16px;
+  padding: 14px 16px 14px 16px;
+  box-sizing: border-box;
 }
-.category-icon{
-display: flex;
-justify-content: space-around;
-align-items: center;
-padding-top: 12px;
+
+.filter-text{
+  font-size: 14px;
+}
+
+/* main */
+
+.main-container {
+  padding: 20px;
+}
+
+.main-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main-pic {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px 24px; 
+}
+
+.pics {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  height: 360px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pics img {
+  width: 100%;
+  height: 100%; 
+  border-radius: 8px;
+  object-fit: cover;
+}
+.pics a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pics h5 {
+  font-size: 16px;
+  margin: 0;
+  color: black;
+  white-space: nowrap; 
+  font-family:"Airbnb Cereal VF" ;
+}
+
+.pics p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 ;
+}
+
+.pics span {
+  display: block;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  margin: 0 ;
+}
+.pics .text {
+  padding-top: 5px;
+  background-color: white; 
+  text-align: left;
 }
 /* footer */
 .footer{
