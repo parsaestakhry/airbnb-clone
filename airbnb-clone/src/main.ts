@@ -44,18 +44,17 @@ const guests = document.querySelector(".guests-search") as HTMLElement;
 const guestMenu = document.querySelector(".who-menu") as HTMLElement;
 guests.addEventListener("click", (event: MouseEvent) => {
   event.stopPropagation();
-  console.log("afruz")
 guestMenu.classList.toggle("active");
 
 });
-const whoInput = document.querySelector("#whoInput")
-whoInput?.addEventListener("click",(e)=>{
-e.preventDefault()
-})
 document.addEventListener("click", (event: MouseEvent) => {
   if (!guests.contains(event.target as Node) && !guestMenu.contains(event.target as Node)) {
     guestMenu.classList.remove("active");
   }
+});
+const whoInput = document.querySelector("") as HTMLInputElement;
+whoInput?.addEventListener("click", () => {
+  guestMenu.classList.toggle("active"); // باز یا بسته کردن منو
 });
 const searchItems = document.querySelectorAll(".search-item");
 const searchBar = document.querySelector(".search-bar") as HTMLElement;

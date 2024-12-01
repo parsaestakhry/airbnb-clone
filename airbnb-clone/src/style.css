@@ -204,6 +204,9 @@ input:focus{
 .checkin-box p,.checkin-box input{
   width: 92px;
 }
+#whoInput{
+  display: block;
+}
 
 .checkout-box{
   width:140px;
@@ -380,7 +383,7 @@ input:focus{
   border-radius: 50%;
   padding: 0;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid #D8D8D8;
   height: 32px;
   width: 32px;
   text-align: center;
@@ -395,6 +398,10 @@ input:focus{
 }
 .minus-button svg{
   text-align: center;
+  color: rgb(106, 106, 106);
+}
+.plus-button svg{
+  color: rgb(106, 106, 106);
 }
 .bold-who-text{
   font-weight: bold;
