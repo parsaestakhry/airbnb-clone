@@ -400,34 +400,7 @@
   <script type="text/javascript" src="datepicker/js/daterangepicker.min.js"></script>
 
   <script type="text/javascript">
-    $(document).ready($(function () {
-      // Initialize the Date Range Picker
-      $('#daterange').daterangepicker({
-        opens: 'right',
-        autoApply: true,
-        autoUpdateInput: false,
-        locale: {
-          format: 'YYYY-MM-DD',
-        },
-      });
-
-      const picker = $('#daterange').data('daterangepicker');
-
-      // Keep the picker always visible
-      picker.show();
-      picker.container.appendTo('#daterange'); // Append to the div
-
-      // Override default hide behavior to prevent automatic closing
-      picker.hide = function () { };
-      // $("#daterange").on("apply.daterangepicker", function (ev, picker) {
-      //   $(this).html(
-      //     console.log({
-      //       start: picker.startDate.format("YYYY-MM-DD"),
-
-      //     }))
-      // })
-    })
-    );
+  
 
   </script>
 </body>

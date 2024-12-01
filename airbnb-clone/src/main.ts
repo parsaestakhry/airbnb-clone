@@ -60,11 +60,42 @@ const activeSearchItems = (selectedItem: Element) => {
 
 // check in
 const checkIn = document.querySelector(".checkin-box") as HTMLElement;
+const checkOut = document.querySelector(".checkout-box") as HTMLElement;
 const checkInCal = document.querySelector(".checkin-container") as HTMLElement;
 checkIn.addEventListener("click", () => {
   checkInCal.classList.toggle("active");
 });
+let checkinDate = ""
+let checkoutDate = ""
+let days ;
+const dateChanged = () => {
+  console.log("date changed")
+  console.log({checkinDate, checkoutDate})
+}
+$(function () {
+  // Initialize the Date Range Picker
+  $('#daterange').daterangepicker({
+    opens: 'right',
+    autoApply: true,
+    autoUpdateInput: false,
+    locale: {
+      format: 'YYYY-MM-DD',
+    },
+  });
 
+  const picker = $('#daterange').data('daterangepicker');
+  $('#daterange').on('apply.daterangepicker', function(ev, picker) {
+    checkinDate = picker.startDate.format('YYYY-MM-DD')
+checkoutDate = picker.endDate.format('YYYY-MM-DD')
+dateChanged()
+});
+  // Keep the picker always visible
+  picker.show();
+  picker.container.appendTo('#daterange'); // Append to the div
 
+  // Override default hide behavior to prevent automatic closing
+  picker.hide = function () { };
+ 
+})
 
 
