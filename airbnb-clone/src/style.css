@@ -290,7 +290,7 @@ input:focus{
   display: none;
   margin-top: 12px;
   padding: 32px 24px 24px 24px;
-  width: auto;
+  width: 43%;
   z-index: 1;
   background: #FFFFFF;
   border-radius: 32px ;
@@ -378,6 +378,9 @@ input:focus{
 .count{
   text-align: center;
   position: relative;
+}
+.minus-button.disabled{
+  color: #ececec;
 }
 .plus-button, .minus-button{
   border-radius: 50%;

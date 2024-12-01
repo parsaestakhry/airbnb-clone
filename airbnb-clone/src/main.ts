@@ -47,15 +47,11 @@ guests.addEventListener("click", (event: MouseEvent) => {
 guestMenu.classList.toggle("active");
 
 });
-document.addEventListener("click", (event: MouseEvent) => {
-  if (!guests.contains(event.target as Node) && !guestMenu.contains(event.target as Node)) {
-    guestMenu.classList.remove("active");
-  }
-});
-const whoInput = document.querySelector("") as HTMLInputElement;
-whoInput?.addEventListener("click", () => {
-  guestMenu.classList.toggle("active"); // باز یا بسته کردن منو
-});
+// document.addEventListener("click", (event: MouseEvent) => {
+//   if (!guests.contains(event.target as Node) && !guestMenu.contains(event.target as Node)) {
+//     guestMenu.classList.remove("active");
+//   }
+// });
 const searchItems = document.querySelectorAll(".search-item");
 const searchBar = document.querySelector(".search-bar") as HTMLElement;
 const activeSearchItems = (selectedItem: Element) => {
@@ -94,27 +90,38 @@ stayTab?.addEventListener("click",() =>{
 // plus-minus
 const plusButton = document.querySelector(".plus-button-adult");
 const minusButton = document.querySelector(".minus-button-adult");
-let adultCount = 0;
+let adultCount = 2;
 let infantCount = 0;
 let childCount = 0;
 let petCount = 0;
-plusButton?.addEventListener("click",() =>{
-  adultCount ++;
-const element =   document.getElementById("adultCount")
-if(element){
-  element.innerHTML = adultCount.toString()
-}
-}
-);
 
-minusButton?.addEventListener("click",() =>{
-  adultCount --;
-  const element =   document.getElementById("adultCount")
-  if(element){
-    element.innerHTML = adultCount.toString()
+  const updateCount = () => {
+    const element = document.getElementById("adultCount");
+    if (element) {
+      element.textContent = adultCount.toString();
+    }
+ 
+  if (adultCount <= 1) {
+    minusButton?.setAttribute("disabled", "true");
+    minusButton?.classList.add("disabled");    
+  } else {
+    minusButton?.removeAttribute("disabled"); 
+    minusButton?.classList.remove("disabled");
   }
-  }
-  );
+ };
+  plusButton?.addEventListener("click", () => {
+    if (adultCount < 16) {    
+      adultCount++;   
+      updateCount();   
+    }
+  });
+  
+  minusButton?.addEventListener("click", () => {
+    if (adultCount > 1) {    
+      adultCount--; 
+      updateCount();ر
+    }
+  });
 // 
 const plusChildButton = document.querySelector(".plus-button-child");
 const minusChildButton = document.querySelector(".minus-button-child");
