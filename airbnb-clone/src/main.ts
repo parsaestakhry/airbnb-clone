@@ -40,12 +40,18 @@ nextBtn.addEventListener("click", () => {
 iconSection.addEventListener("scroll", updateButtonVisibility);
 updateButtonVisibility();
 // who-menu
-const guests = document.querySelector(".guests-box") as HTMLElement;
+const guests = document.querySelector(".guests-search") as HTMLElement;
 const guestMenu = document.querySelector(".who-menu") as HTMLElement;
 guests.addEventListener("click", (event: MouseEvent) => {
+  event.stopPropagation();
+  console.log("afruz")
 guestMenu.classList.toggle("active");
-event.stopPropagation();
+
 });
+const whoInput = document.querySelector("#whoInput")
+whoInput?.addEventListener("click",(e)=>{
+e.preventDefault()
+})
 document.addEventListener("click", (event: MouseEvent) => {
   if (!guests.contains(event.target as Node) && !guestMenu.contains(event.target as Node)) {
     guestMenu.classList.remove("active");
@@ -89,21 +95,24 @@ stayTab?.addEventListener("click",() =>{
 // plus-minus
 const plusButton = document.querySelector(".plus-button-adult");
 const minusButton = document.querySelector(".minus-button-adult");
-let count = 0;
+let adultCount = 0;
+let infantCount = 0;
+let childCount = 0;
+let petCount = 0;
 plusButton?.addEventListener("click",() =>{
-count ++;
+  adultCount ++;
 const element =   document.getElementById("adultCount")
 if(element){
-  element.innerHTML = count.toString()
+  element.innerHTML = adultCount.toString()
 }
 }
 );
 
 minusButton?.addEventListener("click",() =>{
-  count --;
+  adultCount --;
   const element =   document.getElementById("adultCount")
   if(element){
-    element.innerHTML = count.toString()
+    element.innerHTML = adultCount.toString()
   }
   }
   );
@@ -111,19 +120,19 @@ minusButton?.addEventListener("click",() =>{
 const plusChildButton = document.querySelector(".plus-button-child");
 const minusChildButton = document.querySelector(".minus-button-child");
 plusChildButton?.addEventListener("click",() =>{
-count ++;
+  childCount ++;
 const element =   document.getElementById("childCount")
 if(element){
-  element.innerHTML = count.toString()
+  element.innerHTML = childCount.toString()
 }
 }
 );
 
 minusChildButton?.addEventListener("click",() =>{
-  count --;
+  childCount --;
   const element =   document.getElementById("childCount")
   if(element){
-    element.innerHTML = count.toString()
+    element.innerHTML = childCount.toString()
   }
   }
   );
@@ -131,19 +140,19 @@ minusChildButton?.addEventListener("click",() =>{
   const plusInfantButton = document.querySelector(".plus-button-infant");
 const minusInfantButton = document.querySelector(".minus-button-infant");
 plusInfantButton?.addEventListener("click",() =>{
-count ++;
+  infantCount ++;
 const element =   document.getElementById("infantCount")
 if(element){
-  element.innerHTML = count.toString()
+  element.innerHTML = infantCount.toString()
 }
 }
 );
 
 minusInfantButton?.addEventListener("click",() =>{
-  count --;
+  infantCount --;
   const element =   document.getElementById("infantCount")
   if(element){
-    element.innerHTML = count.toString()
+    element.innerHTML = infantCount.toString()
   }
   }
   );
@@ -151,19 +160,19 @@ minusInfantButton?.addEventListener("click",() =>{
   const plusPetButton = document.querySelector(".plus-button-pet");
   const minusPetButton = document.querySelector(".minus-button-pet");
   plusPetButton?.addEventListener("click",() =>{
-  count ++;
-  const element =   document.getElementById("petount")
+    petCount ++;
+  const element =   document.getElementById("petCount")
   if(element){
-    element.innerHTML = count.toString()
+    element.innerHTML = petCount.toString()
   }
   }
   );
   
   minusPetButton?.addEventListener("click",() =>{
-    count --;
+    petCount --;
     const element =   document.getElementById("petCount")
     if(element){
-      element.innerHTML = count.toString()
+      element.innerHTML = petCount.toString()
     }
     }
     );
