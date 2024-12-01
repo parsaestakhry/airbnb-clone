@@ -92,19 +92,22 @@
       </div>
       <!-- check in dropdown -->
       <div class="checkin-container">
-        <div class="checkin-dropdown">
-          <div class="checkin-header">
-            <div class="checkin-date">
-              Dates
-              <!-- <input type="text" id="daterange" class="checkin-input" placeholder="Dates" /> -->
-            </div>
-            <div class="checkin-month">Months</div>
-            <div class="checkin-flex">Flexible</div>
-            
-          </div>
+        <!-- <div class="checkin-dropdown"> -->
+        <div class="checkin-header">
+          <button class="checkin-date">
+            Dates
+            <!-- <input type="text" id="daterange" class="checkin-input" placeholder="Dates" /> -->
+          </button>
+          <button class="checkin-month">Months</button>
+          <button class="checkin-flex">Flexible</button>
+
+        </div>
+        <div class="cal-container">
           <div id="daterange"></div>
+
         </div>
       </div>
+      <!-- </div> -->
       <div class="checkout-box search-item">
         <p class="checkout">Check Out</p>
         <input type="text" name="" id="" placeholder="Add dates">
@@ -398,28 +401,33 @@
 
   <script type="text/javascript">
     $(document).ready($(function () {
-  // Initialize the Date Range Picker
-  $('#daterange').daterangepicker({
-    opens: 'right',
-    autoApply: true,
-    startDate: moment().startOf('month'),
-    endDate: moment().endOf('month'),
-    locale: {
-      format: 'YYYY-MM-DD',
-    },
-  });
+      // Initialize the Date Range Picker
+      $('#daterange').daterangepicker({
+        opens: 'right',
+        autoApply: true,
+        autoUpdateInput: false,
+        locale: {
+          format: 'YYYY-MM-DD',
+        },
+      });
 
-  const picker = $('#daterange').data('daterangepicker');
-  
-  // Keep the picker always visible
-  picker.show(); 
-  picker.container.appendTo('#daterange'); // Append to the div
+      const picker = $('#daterange').data('daterangepicker');
 
-  // Override default hide behavior to prevent automatic closing
-  picker.hide = function () {}; 
+      // Keep the picker always visible
+      picker.show();
+      picker.container.appendTo('#daterange'); // Append to the div
 
-})
-  );
+      // Override default hide behavior to prevent automatic closing
+      picker.hide = function () { };
+      // $("#daterange").on("apply.daterangepicker", function (ev, picker) {
+      //   $(this).html(
+      //     console.log({
+      //       start: picker.startDate.format("YYYY-MM-DD"),
+
+      //     }))
+      // })
+    })
+    );
 
   </script>
 </body>

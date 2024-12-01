@@ -516,7 +516,6 @@ input:focus {
 }
 
 .checkin-container {
-  max-height: 297px;
   box-shadow: 0 3px 12px 0 rgb(0 0 0/0.15);
   left: 0;
   right: 0;
@@ -530,19 +529,18 @@ input:focus {
   background-color: white;
 }
 
-.checkin-dropdown {
+/* .checkin-dropdown {
   position: relative;
   padding: 18px 28px 10px;
-}
+} */
 
 .checkin-header {
   border: 2px solid #EBEBEB;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 40%;
+width: 303px;
   background-color: #EBEBEB;
   padding: 0 4px;
-  gap: 24px;
   margin: 0 auto;
   border-radius: 30px;
   display: flex;
@@ -552,11 +550,33 @@ input:focus {
 .checkin-date,
 .checkin-month,
 .checkin-flex {
+  background-color: #EBEBEB;
   padding: 8px 12px;
   margin: 4px 2px 4px 0;
-  border: 1px solid #dddddd;
   font-size: 14px;
   font-family: "roboto";
   border-radius: 100px;
   position: relative;
+  text-align: center;
+  border: unset;
+  flex: 1;
+}
+.checkin-date:hover,
+.checkin-month:hover,
+.checkin-flex:hover{
+  background-color: #DDDDDD;
+}
+
+#daterange td{
+  width: 48px;
+  height: 48px;
+  border-radius: 50% !important;
+}
+#daterange td:hover{
+ border: 1px solid black;
+ border-radius: 50% !important;
+ 
+}
+td.active{
+  background-color: #000 !important;
 }
