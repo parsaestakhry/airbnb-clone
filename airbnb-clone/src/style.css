@@ -583,4 +583,21 @@ td.active{
 .micro-date{
   width: 12px;
 height: 12px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid;
+
+}
+.micro-flex{
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+width: 64%;
+font-size: 12px;
+}
+.micro-date span, .exact-date{
+  white-space: nowrap;
 }
