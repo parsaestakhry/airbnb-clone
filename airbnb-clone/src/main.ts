@@ -58,3 +58,35 @@ const activeSearchItems = (selectedItem: Element) => {
 
   searchItems.forEach(item=> activeSearchItems(item))
 
+  //
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll('.tab-links');
+    const tabContents = document.querySelectorAll('.tab-content');
+  
+    tabContents.forEach((content) => {
+      (content as HTMLElement).style.display = 'none';
+    });
+  
+    (tabContents[0] as HTMLElement).style.display = 'block';
+    (tabs[0] as HTMLElement).setAttribute('aria-selected', 'true');
+  
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+
+        tabContents.forEach((content) => {
+          (content as HTMLElement).style.display = 'none';
+        });
+      
+        tabs.forEach((tab) => {
+          (tab as HTMLElement).setAttribute('aria-selected', 'false');
+        });
+      
+        (tabContents[index] as HTMLElement).style.display = 'block';
+        
+        (tabs[index] as HTMLElement).setAttribute('aria-selected', 'true');
+      });
+    });
+  });
+  
+  
+  
