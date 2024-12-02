@@ -580,3 +580,7 @@ width: 303px;
 td.active{
   background-color: #000 !important;
 }
+.micro-date{
+  width: 12px;
+height: 12px;
+}
