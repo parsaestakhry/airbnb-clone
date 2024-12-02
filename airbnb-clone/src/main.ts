@@ -65,8 +65,27 @@ const activeSearchItems = (selectedItem: Element) => {
   // where menu
 const locations = document.querySelector(".where-box") as HTMLElement;
 const locationMenu = document.querySelector(".region-select") as HTMLElement;
-locations.addEventListener("click", () => {
+const inputField = document.querySelector(".where-box input") as HTMLInputElement;
+const regionItems = document.querySelectorAll(".region-item .country-text");
+locations.addEventListener("click", (event) => {
+  event.stopPropagation(); 
   locationMenu.classList.toggle("active");
+});
+document.addEventListener("click", (event) => {
+  const target = event.target as HTMLElement;
+  if (!locationMenu.contains(target) && !locations.contains(target)) {
+    locationMenu.classList.remove("active");
+  }
+});
+
+regionItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const regionText = item.textContent;
+    if (regionText) {
+      inputField.value = regionText; // تنظیم متن انتخاب شده در input
+      locationMenu.classList.remove("active"); // بستن منو
+    }
+  });
 });
 
 // exp searchbox
