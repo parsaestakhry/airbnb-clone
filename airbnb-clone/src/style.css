@@ -444,7 +444,6 @@ input:focus{
 .main-pic {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  gap: 40px 24px; 
 }
 
 .pics {
@@ -460,8 +459,8 @@ input:focus{
 }
 
 .pics img {
-  width: 100%;
-  height: 100%; 
+  width: 90%;
+  height: 70%; 
   border-radius: 8px;
   object-fit: cover;
 }
@@ -476,7 +475,10 @@ input:focus{
   margin: 0;
   color: black;
   white-space: nowrap; 
-  font-family:"Airbnb Cereal VF" ;
+  font-family:"roboto" ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
 }
 
 .pics p {
@@ -496,17 +498,20 @@ input:focus{
   padding-top: 5px;
   background-color: white; 
   text-align: left;
+  width: 80%;
 }
 .share-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 13px;
+  right: 40px;
   background-color: rgba(255, 255, 255, 0.7);
   border: none;
   border-radius: 50%;
   padding: 8px;
   cursor: pointer;
   z-index: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .share-btn img {
@@ -551,5 +556,11 @@ input:focus{
 .tab-list{
   overflow: hidden;
   width: 100%;
+}
+
+.selected-pic{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 12px;
 }
 
