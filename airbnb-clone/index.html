@@ -47,9 +47,7 @@
       <div class="home-container">
         <a href="http://" class="home">Airbnb your home</a>
         <a href="http://" class="language">
-          <span class="lanlogo">
-            <img src="images/language-svgrepo-com.svg" alt="" width="16px" height="16px" />
-          </span>
+          <img class="lanlogo" src="images/language-svgrepo-com.svg" alt="" width="16px" height="16px" />
         </a>
       </div>
       <!-- sign in logo -->
@@ -80,30 +78,74 @@
   <!-- search box -->
   <div class="search-box">
     <div class="search-bar">
-      <div class="where-box search-item">
-        <p class="where">Where</p>
-        <input type="text" name="" id="" placeholder="Search destinations">
+      <div class="where-box">
+        <div class="search-item">
+          <p class="where">Where</p>
+          <input type="text" name="" id="" placeholder="Search destinations" readonly>
+        </div>
+      </div>
+      <!-- where section -->
+      <div class="region-select">
+        <div class="region-text">Search by region</div>
+        <div class="continents">
+          <div class="region-item">
+            <img class="region-flex" alt=""
+              src="https://a0.muscache.com/pictures/f9ec8a23-ed44-420b-83e5-10ff1f071a13.jpg?im_w=320">
+            <div class="country-text">I’m flexible</div>
+          </div>
+          <div class="region-item">
+            <img class="Africa" alt=""
+              src="https://a0.muscache.com/im/pictures/7e9673a5-4164-4708-a047-8d281b5980e7.jpg?im_w=320">
+            <div class="country-text">Africa</div>
+          </div>
+          <div class="region-item">
+            <img class="Italy" alt=""
+              src="https://a0.muscache.com/im/pictures/ea5598d7-2b07-4ed7-84da-d1eabd9f2714.jpg?im_w=320">
+            <div class="country-text">Italy</div>
+          </div>
+          <div class="region-item">
+            <img class="Southeast Asia" alt=""
+              src="https://a0.muscache.com/im/pictures/d77de9f5-5318-4571-88c7-e97d2355d20a.jpg?im_w=320">
+            <div class="country-text">Southeast Asia</div>
+          </div>
+          <div class="region-item">
+            <img class="Spain" alt=""
+              src="https://a0.muscache.com/im/pictures/a0fd6dfc-6bec-4abb-850e-9ab78ed7bf37.jpg?im_w=320">
+            <div class="country-text">Spain</div>
+          </div>
+          <div class="region-item">
+            <img class="South America" alt=""
+              src="https://a0.muscache.com/im/pictures/06a30699-aead-492e-ad08-33ec0b383399.jpg?im_w=320">
+            <div class="country-text">South America</div>
+          </div>
+        </div>
       </div>
       <div class="checkin-box search-item">
         <p class="checkin">Check in</p>
-        <input type="text" name="" id="" placeholder="Add dates">
+        <input type="text" name="" id="" placeholder="Add dates" readonly>
       </div>
       <div class="checkout-box search-item">
         <p class="checkout">Check Out</p>
-        <input type="text" name="" id="" placeholder="Add dates">
+        <input type="text" name="" id="" placeholder="Add dates" readonly>
       </div>
-      <div class="guests-box">
-        <div class="search-item">
-          <p class="who">Who</p>
-          <input type="text" name="" id="" placeholder="Add guests">
-        </div>
-        <div class="search-bt">
-          <div class="search-button">
-            <svg class="searchicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
-              role="presentation" focusable="false"
-              style="display: block; fill:none ; height: 16px; width: 16px; stroke:white ; stroke-width: 4; overflow: visible;">
-              <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
-            </svg>
+      <div class="search-item display-none date-box">
+        <p class="date">Date</p>
+        <input type="text" name="" id="" placeholder="Add dates" readonly>
+      </div>
+      <div>
+        <div class="guests-search search-item">
+          <div class="guests-box">
+            <p class="who">Who</p>
+            <input type="text" name="" id="whoInput" placeholder="Add guests" readonly>
+          </div>
+          <div class="search-bt">
+            <div class="search-button">
+              <svg class="searchicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                role="presentation" focusable="false"
+                style="display: block; fill:none ; height: 16px; width: 16px; stroke:white ; stroke-width: 4; overflow: visible;">
+                <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -117,15 +159,15 @@
             </div>
             <div class="right-who-menu">
               <div class="plus-minus">
-                <button class="minus-button">
+                <button class="minus-button-adult minus-button">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
                     <path d="m2 16h28"></path>
                   </svg>
                 </button>
-                <div class="count">0</div>
-                <button class="plus-button adult-button">
+                <div class="count" id="adultCount">2</div>
+                <button class="plus-button-adult plus-button">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
@@ -143,15 +185,15 @@
             </div>
             <div class="right-who-menu">
               <div class="plus-minus">
-                <button class="minus-button">
+                <button class="minus-button minus-button-child">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
                     <path d="m2 16h28"></path>
                   </svg>
                 </button>
-                <div class="count">0</div>
-                <button class="plus-button">
+                <div class="count" id="childCount">0</div>
+                <button class="plus-button plus-button-child">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
@@ -169,15 +211,15 @@
             </div>
             <div class="right-who-menu">
               <div class="plus-minus">
-                <button class="minus-button">
+                <button class="minus-button minus-button-infant">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
                     <path d="m2 16h28"></path>
                   </svg>
                 </button>
-                <div class="count">0</div>
-                <button class="plus-button">
+                <div class="count" id="infantCount">0</div>
+                <button class="plus-button plus-button-infant">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
@@ -197,15 +239,15 @@
             </div>
             <div class="right-who-menu">
               <div class="plus-minus">
-                <button class="minus-button">
+                <button class="minus-button minus-button-pet">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
                     <path d="m2 16h28"></path>
                   </svg>
                 </button>
-                <div class="count">0</div>
-                <button class="plus-button">
+                <div class="count" id="petCount">0</div>
+                <button class="plus-button plus-button-pet">
                   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
                     focusable="false"
                     style=" fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
@@ -229,6 +271,11 @@
       <img src="/images/prev.svg" alt="" class="prev-btn" width="16px" height="16px">
       <div class="icon-section">
         <div class="icon-item">
+          <img class="icon" src="https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg" alt=""
+            width="24" height="24" />
+          <span class="icon-text">Countryside</span>
+        </div>
+        <div class="icon-item">
           <img class="icon"
             src="https://a0.muscache.com/im/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png"
             alt="" width="24" height="24" />
@@ -239,8 +286,6 @@
             width="24" height="24" />
           <span class="icon-text">Countryside</span>
         </div>
-
-
         <div class="icon-item">
           <img class="icon" src="https://a0.muscache.com/pictures/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt=""
             width="24" height="24" />
