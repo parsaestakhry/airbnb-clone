@@ -8,25 +8,16 @@
   src: url(/font/AirbnbCerealVF_Cyril_W_Wght.woff2);
 }
 
-
 body {
   width: 100vw;
-overflow-x: hidden;
-margin: 0;
-box-sizing: border-box;
-font-family: "Airbnb Cereal VF";
+  overflow-x: hidden;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Airbnb Cereal VF";
 }
-main{
+main {
   padding: 0 80px;
 }
-/* header section */
-.header-container {
-  display: flex;
-  position: relative;
-  align-items: center;
-  height: 80px;
-}
-
 .hamburger,
 .language,
 .home,
@@ -36,6 +27,13 @@ main{
 .plus-button,
 .minus-button {
   cursor: pointer;
+}
+/* header section */
+.header-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 80px;
 }
 
 .left-header {
@@ -63,7 +61,8 @@ main{
   transition: 0.2s ease-in;
   color: #b1aeae;
 }
-.stay:hover, .exp:hover{
+.stay:hover,
+.exp:hover {
   color: #444242;
   background-color: #f2f1f1;
   border-radius: 22px;
@@ -87,30 +86,29 @@ main{
 }
 
 .home:hover {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border-radius: 22px;
 }
 
 .home-container {
   margin-right: 8px;
-margin-right: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language {
-width: 40px;
-height: 40px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language:hover {
-    background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .right-header {
@@ -237,20 +235,25 @@ hr {
 .where-box input:hover,
 .checkin-box input:hover,
 .checkout-box input:hover,
-.guests-box input:hover, 
-.date-box input:hover{
+.guests-box input:hover,
+.date-box input:hover {
   background-color: #f2f1f1;
 }
-.where-box, .checkout-box, .checkin-box{
+.where-box,
+.checkout-box,
+.checkin-box {
   position: relative;
 }
-.where-box::after, .date-box::after, .checkout-box::after, .checkin-box ::after{
+.where-box::after,
+.date-box::after,
+.checkout-box::after,
+.checkin-box ::after {
   width: 1px;
   height: 40px;
   background-color: #dfdfdf;
   content: "";
   position: absolute;
-  right:0;
+  right: 0;
   top: 50%;
   transform: translate(0, -50%);
 }
@@ -267,7 +270,7 @@ input:focus {
 .checkin-box input {
   width: 92px;
 }
-#whoInput{
+#whoInput {
   display: block;
 }
 
@@ -279,7 +282,7 @@ input:focus {
 .checkout-box input {
   width: 92px;
 }
-.date-box{
+.date-box {
   width: 280px;
 }
 
@@ -326,17 +329,17 @@ input:focus {
 }
 
 .search-item input:hover {
-  background-color: #DDDDDD;
+  background-color: #dddddd;
 }
 
 .search-item:hover,
 .guests-box:hover {
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   cursor: pointer;
 }
 
 .bg-grey {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .search-bt {
@@ -348,7 +351,7 @@ input:focus {
 .search-button {
   width: 48px;
   height: 48px;
-  background-color: #FF5A5F;
+  background-color: #ff5a5f;
   border-radius: 50px;
   display: flex;
   justify-content: center;
@@ -362,62 +365,61 @@ input:focus {
   cursor: pointer;
 }
 
-
-.guests-search{
+.guests-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 /* where dropdown */
-.region-select{
+.region-select {
   display: none;
   margin-top: 12px;
   padding: 32px 24px 24px 24px;
   width: 43%;
   z-index: 2;
-  background: #FFFFFF;
-  border-radius: 32px ;
+  background: #ffffff;
+  border-radius: 32px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
   top: 100%;
   position: absolute;
   left: 0;
   height: auto;
 }
-.region-select.active{
+.region-select.active {
   display: block;
 }
-.continents{
+.continents {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
 }
-.region-text{
-  margin: 0 0 16px 8px ;
+.region-text {
+  margin: 0 0 16px 8px;
   font-size: 14px;
   font-weight: bold;
   font-family: "Airbnb Cereal VF";
 }
 
-.region-item img{
+.region-item img {
   width: 100%;
   height: 100px;
   cursor: pointer;
   border-radius: 10px;
   margin-bottom: 0.4rem;
   transition: transform 0.25s ease;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
 }
-.region-item{
+.region-item {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 8px;
 }
 .region-item:hover {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   border-radius: 1rem;
 }
-.country-text{
+.country-text {
   font-size: 14px;
   font-family: "Airbnb Cereal VF";
   margin: 0 2px;
@@ -428,7 +430,7 @@ input:focus {
   position: absolute;
   right: 0;
   z-index: 2;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 32px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
   margin-top: 12px;
@@ -468,14 +470,15 @@ input:focus {
   position: relative;
 }
 
-.minus-button.disabled{
+.minus-button.disabled {
   color: #ececec;
 }
-.plus-button, .minus-button{
+.plus-button,
+.minus-button {
   border-radius: 50%;
   padding: 0;
   margin: 0;
-  border: 1px solid #D8D8D8;
+  border: 1px solid #d8d8d8;
   height: 32px;
   width: 32px;
   text-align: center;
@@ -494,7 +497,7 @@ input:focus {
   text-align: center;
   color: rgb(106, 106, 106);
 }
-.plus-button svg{
+.plus-button svg {
   color: rgb(106, 106, 106);
 }
 
@@ -511,10 +514,10 @@ input:focus {
   padding-top: 4px;
   color: #797979;
 }
-.display-none{
+.display-none {
   display: none;
 }
-.display-block{
+.display-block {
   display: block;
 }
 
@@ -561,13 +564,13 @@ input:focus {
 .icon-item:hover {
   opacity: 1;
 }
-.icon-item::after{
+.icon-item::after {
   width: 30px;
   height: 2px;
-content: "";
-border-radius: 20px;
+  content: "";
+  border-radius: 20px;
 }
-.icon-item:hover::after{
+.icon-item:hover::after {
   background-color: #717171;
 }
 .icon {
@@ -585,7 +588,7 @@ border-radius: 20px;
 .icon-text {
   font-size: 12px;
   white-space: nowrap;
-font-family: "Airbnb Cereal VF";
+  font-family: "Airbnb Cereal VF";
 }
 
 .prev-btn,
@@ -608,7 +611,7 @@ font-family: "Airbnb Cereal VF";
 }
 
 /* filter button */
-.filter-button{
+.filter-button {
   display: flex;
   align-items: center;
   border-radius: 25px;
@@ -723,7 +726,7 @@ font-family: "Airbnb Cereal VF";
   height: 14px;
 }
 
-/*  */
+/* Inspiration  */
 .down-section {
   padding: 48px 40px;
 }
@@ -733,7 +736,6 @@ font-family: "Airbnb Cereal VF";
   font-size: 22px;
   font-family: "Airbnb Cereal VF";
   font-weight: 500;
-
 }
 
 .ins-btn {
@@ -800,7 +802,6 @@ font-family: "Airbnb Cereal VF";
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
 }
 
 .tab-content ul li span {
@@ -819,20 +820,21 @@ font-family: "Airbnb Cereal VF";
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 12px;
-}/* footer */
-.footer{
+}
+/* footer */
+.footer {
   padding: 0 80px;
   background-color: #f8f8f8;
 }
 
-.up-footer{
+.up-footer {
   width: 1360px;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap:8px;
-    align-items: start;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 8px;
+  align-items: start;
 }
 .sec-header {
   font-size: 20px;
@@ -841,38 +843,39 @@ font-family: "Airbnb Cereal VF";
   font-family: "roboto";
   font-size: 14px;
   font-weight: 500;
-  
 }
-.support-sec, .host-sec, .airbnb-sec{
-padding: 48px 0;
-display: flex;
-flex-direction: column;
-gap: 12px;
-font-size: 12px;
-font-family: "roboto";
-font-weight: normal;
+.support-sec,
+.host-sec,
+.airbnb-sec {
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  font-family: "roboto";
+  font-weight: normal;
 }
-.footer a{
+.footer a {
   display: block;
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    opacity: 0.9;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.9;
 }
-.footer a:hover{
+.footer a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   opacity: 1;
 }
-.down-footer{
+.down-footer {
   display: flex;
   width: 1360px;
   height: 68px;
   justify-content: space-between;
-  border-top:1px solid #e3e3e3;
+  border-top: 1px solid #e3e3e3;
   margin-top: 0;
 }
-.left-footer{
+.left-footer {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -886,7 +889,7 @@ font-weight: normal;
   font-size: 14px;
   font-family: "roboto";
 }
-.right-footer{
+.right-footer {
   display: flex;
   align-items: center;
   gap: 15px;
